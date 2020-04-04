@@ -18,6 +18,9 @@ message(STATUS "Opus project version: ${PROJECT_VERSION}")
 project(Opus LANGUAGES C VERSION ${PROJECT_VERSION})
 include(opus_buildtype.cmake)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+
 option(OPUS_BUILD_SHARED_LIBRARY "Build shared library" OFF)
 option(OPUS_STACK_PROTECTOR "Use stack protection" ON)
 option(OPUS_USE_ALLOCA "Use alloca for stack arrays (on non-C99 compilers)" OFF)
