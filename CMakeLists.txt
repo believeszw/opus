@@ -21,7 +21,7 @@ include(opus_buildtype.cmake)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
-option(OPUS_BUILD_SHARED_LIBRARY "Build shared library" OFF)
+option(OPUS_BUILD_SHARED_LIBRARY "Build shared library" ON)
 option(OPUS_STACK_PROTECTOR "Use stack protection" ON)
 option(OPUS_USE_ALLOCA "Use alloca for stack arrays (on non-C99 compilers)" OFF)
 option(OPUS_CUSTOM_MODES "Enable non-Opus modes, e.g. 44.1 kHz & 2^n frames"
